@@ -16,7 +16,7 @@ public class DataSource {
             porta = 3306;
             database = "balanca_mas_nao_cai";
             username = "root";
-            password = "123456";
+            password = "12345";
 
             String url = "jdbc:mysql://" + hostname + ":" + porta + "/" + database
                        + "?useTimezone=true&serverTimezone=UTC";

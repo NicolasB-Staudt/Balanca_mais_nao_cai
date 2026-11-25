@@ -9,16 +9,13 @@ public class excluirEngenheiros extends javax.swing.JInternalFrame {
     public excluirEngenheiros() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
 
         limpacampos();
         letable();
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         nomeEng = new javax.swing.JTextField();
@@ -37,13 +34,17 @@ public class excluirEngenheiros extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         codEng = new javax.swing.JTextField();
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("ALTERAR ENGENHEIRO ");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("CREA");
 
-        btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,6 +63,11 @@ public class excluirEngenheiros extends javax.swing.JInternalFrame {
                 "Código", "Nome", "CREA", "Data de Admissão"
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
         btVoltar.setText("Voltar ao Menu");
@@ -71,7 +77,7 @@ public class excluirEngenheiros extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Data de Admissão");
 
         jButton1.setText("Pesquisar");
@@ -81,10 +87,10 @@ public class excluirEngenheiros extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Código");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nome");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -165,13 +171,10 @@ public class excluirEngenheiros extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -208,6 +211,18 @@ public class excluirEngenheiros extends javax.swing.JInternalFrame {
         letable();
     }
     }//GEN-LAST:event_btExcluirActionPerformed
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+
+            if (jTable2.getSelectedRow() > -1) {
+    codEng.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString());
+    nomeEng.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 1).toString());
+    creaEng.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 2).toString());
+    dtEng.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 3).toString());
+
+}
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable2MouseClicked
 
     public void limpacampos() {
         codEng.setText("");
@@ -251,7 +266,7 @@ public class excluirEngenheiros extends javax.swing.JInternalFrame {
         }
     }
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btExcluir;
     private javax.swing.JButton btVoltar;
     private javax.swing.JTextField codEng;
@@ -267,5 +282,5 @@ public class excluirEngenheiros extends javax.swing.JInternalFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField nomeEng;
     private javax.swing.JTextField pesquisar;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

@@ -17,18 +17,14 @@ public class Daofuncoes {
 
         try {
             String SQL = "SELECT * FROM funcoes";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
-
             ArrayList<funcoes> lista = new ArrayList<>();
 
             while (rs.next()) {
                 funcoes prod = new funcoes();
-
                 prod.setIdFuncao(rs.getInt("idFuncao"));
                 prod.setDsFuncao(rs.getString("dsFuncao"));
-
                 lista.add(prod);
             }
 
@@ -47,12 +43,9 @@ public class Daofuncoes {
             String SQL = "INSERT INTO funcoes "
                        + "(idFuncao, dsFuncao) "
                        + "VALUES (?, ?)";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
-
             ps.setInt(1, prod.getIdFuncao());
             ps.setString(2, prod.getDsFuncao());
-
             ps.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
@@ -69,12 +62,9 @@ public class Daofuncoes {
             String SQL = "UPDATE funcoes "
                        + "SET dsFuncao=? "
                        + "WHERE idFuncao=?";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
-
             ps.setString(1, prod.getDsFuncao());
             ps.setInt(2, prod.getIdFuncao());
-
             ps.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Alterado com sucesso!");
@@ -90,10 +80,8 @@ public class Daofuncoes {
 
         try {
             String SQL = "DELETE FROM funcoes WHERE idFuncao=?";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
             ps.setInt(1, codigo);
-
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Excluído com sucesso!");
 
@@ -108,12 +96,9 @@ public class Daofuncoes {
 
         try {
             String SQL = "SELECT * FROM funcoes WHERE dsFuncao LIKE ?";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
             ps.setString(1, "%" + descricao + "%");
-
             ResultSet rs = ps.executeQuery();
-
             ArrayList<funcoes> lista = new ArrayList<>();
 
             while (rs.next()) {
@@ -121,7 +106,6 @@ public class Daofuncoes {
 
                 prod.setIdFuncao(rs.getInt("idFuncao"));
                 prod.setDsFuncao(rs.getString("dsFuncao"));
-
                 lista.add(prod);
             }
 

@@ -6,14 +6,10 @@ import Dao.DataSource;
 public class incluirUsuario extends javax.swing.JInternalFrame {
     public incluirUsuario() {
         initComponents();
-
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         btIncluir = new javax.swing.JButton();
@@ -29,7 +25,11 @@ public class incluirUsuario extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         senhaUser = new javax.swing.JTextField();
 
-        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
+        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btIncluir.setText("Incluir");
         btIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -37,7 +37,7 @@ public class incluirUsuario extends javax.swing.JInternalFrame {
             }
         });
 
-        btLimpar.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btLimpar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -45,7 +45,7 @@ public class incluirUsuario extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("INCLUSÃO DE USUÁRIOS ");
 
         btVoltar.setText("Voltar ao Menu");
@@ -55,16 +55,16 @@ public class incluirUsuario extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Email do Usuário");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Código do Usuário");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nome do Usuário");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Senha do Usuário");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -132,13 +132,10 @@ public class incluirUsuario extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-            menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+           dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void btIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIncluirActionPerformed
@@ -162,7 +159,7 @@ public class incluirUsuario extends javax.swing.JInternalFrame {
         senhaUser.setText("");
     }//GEN-LAST:event_btLimparActionPerformed
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btIncluir;
     private javax.swing.JButton btLimpar;
     private javax.swing.JButton btVoltar;
@@ -175,5 +172,5 @@ public class incluirUsuario extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField nomeUser;
     private javax.swing.JTextField senhaUser;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

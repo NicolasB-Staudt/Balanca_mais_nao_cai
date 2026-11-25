@@ -3,14 +3,10 @@ package view;
 public class menuFinal extends javax.swing.JInternalFrame {
     public menuFinal() {
         initComponents();
-
-    setClosable(false);
-    setResizable(false);
-    setMaximizable(false);
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel39 = new javax.swing.JPanel();
@@ -61,7 +57,7 @@ public class menuFinal extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12));  
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel10.setText("Balanca_mias_nao_cai");
 
         jLabel11.setText("Controle de Obras");
@@ -69,13 +65,16 @@ public class menuFinal extends javax.swing.JInternalFrame {
         jLabel24.setForeground(new java.awt.Color(242, 242, 242));
         jLabel24.setText("BM");
 
+        setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconifiable(true);
+        setMaximizable(true);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jPanel3.setBackground(new java.awt.Color(30, 64, 175));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("BM");
 
@@ -93,7 +92,7 @@ public class menuFinal extends javax.swing.JInternalFrame {
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
         );
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12));  
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel12.setText("Balanca_mias_nao_cai");
 
         jLabel13.setText("Controle de Obras");
@@ -111,7 +110,7 @@ public class menuFinal extends javax.swing.JInternalFrame {
             .addGap(0, 9, Short.MAX_VALUE)
         );
 
-        btFases.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btFases.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btFases.setText("Fases");
         btFases.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,7 +118,7 @@ public class menuFinal extends javax.swing.JInternalFrame {
             }
         });
 
-        btUsuer.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btUsuer.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btUsuer.setText("Usuários");
         btUsuer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,7 +126,7 @@ public class menuFinal extends javax.swing.JInternalFrame {
             }
         });
 
-        btEng.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btEng.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btEng.setText("Engenheiros");
         btEng.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,7 +134,7 @@ public class menuFinal extends javax.swing.JInternalFrame {
             }
         });
 
-        btFun.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btFun.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btFun.setText("Funções");
         btFun.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,7 +142,7 @@ public class menuFinal extends javax.swing.JInternalFrame {
             }
         });
 
-        btObras.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btObras.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btObras.setText("Obras");
         btObras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,7 +150,7 @@ public class menuFinal extends javax.swing.JInternalFrame {
             }
         });
 
-        btSair.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        btSair.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btSair.setText("Sair do Sistema");
         btSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,7 +158,7 @@ public class menuFinal extends javax.swing.JInternalFrame {
             }
         });
 
-        btOrca.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btOrca.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btOrca.setText("Orçamento");
         btOrca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,10 +221,10 @@ public class menuFinal extends javax.swing.JInternalFrame {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel14.setText("Painel Administrativo");
 
-        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel25.setText("Óla, Usuario, Teste");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -297,47 +296,41 @@ public class menuFinal extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btFasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFasesActionPerformed
     fases janela = new fases();
-
-    getDesktopPane().add(janela);
+    jDesktopPane1.add(janela);
     janela.setVisible(true);
     }//GEN-LAST:event_btFasesActionPerformed
 
     private void btOrcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOrcaActionPerformed
-        orcamento janela = new orcamento();
-
-    getDesktopPane().add(janela);
+    orcamento janela = new orcamento();
+    jDesktopPane1.add(janela);
     janela.setVisible(true);
     }//GEN-LAST:event_btOrcaActionPerformed
 
     private void btObrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btObrasActionPerformed
-        obras janela = new obras();
-
-    getDesktopPane().add(janela);
+    obras janela = new obras();
+    jDesktopPane1.add(janela);
     janela.setVisible(true);
     }//GEN-LAST:event_btObrasActionPerformed
 
     private void btFunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFunActionPerformed
-       funcoes janela = new funcoes();
-
-    getDesktopPane().add(janela);
+    funcoes janela = new funcoes();
+    jDesktopPane1.add(janela);
     janela.setVisible(true);
     }//GEN-LAST:event_btFunActionPerformed
 
     private void btEngActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEngActionPerformed
-       engenheiros janela = new engenheiros();
-
-    getDesktopPane().add(janela);
+    engenheiros janela = new engenheiros();
+    jDesktopPane1.add(janela);
     janela.setVisible(true);
     }//GEN-LAST:event_btEngActionPerformed
 
     private void btUsuerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUsuerActionPerformed
-       usuarios janela = new usuarios();
-
-    getDesktopPane().add(janela);
+     usuarios janela = new usuarios();
+    jDesktopPane1.add(janela);
     janela.setVisible(true);
     }//GEN-LAST:event_btUsuerActionPerformed
 
@@ -345,32 +338,8 @@ public class menuFinal extends javax.swing.JInternalFrame {
         dispose();
     }//GEN-LAST:event_btSairActionPerformed
 
-    public static void main(String args[]) {
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(menuFinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(menuFinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(menuFinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(menuFinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
 
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new JFlogin().setVisible(true);
-            }
-        });
-    }
-
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEng;
     private javax.swing.JButton btFases;
     private javax.swing.JButton btFun;
@@ -394,5 +363,5 @@ public class menuFinal extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

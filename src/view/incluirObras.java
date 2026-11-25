@@ -7,13 +7,10 @@ public class incluirObras extends javax.swing.JInternalFrame {
     public incluirObras() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
@@ -31,13 +28,17 @@ public class incluirObras extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         idEngenheiro = new javax.swing.JTextField();
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("id da Obra");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nome da Obra");
 
-        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btIncluir.setText("Incluir");
         btIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -45,7 +46,7 @@ public class incluirObras extends javax.swing.JInternalFrame {
             }
         });
 
-        btLimpar.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btLimpar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,7 +54,7 @@ public class incluirObras extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("INCLUSÃO DE OBRAS ");
 
         btVoltar.setText("Voltar ao Menu");
@@ -63,13 +64,13 @@ public class incluirObras extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Data de Início");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Data de Termino");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Id do Engenheiro");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -154,13 +155,10 @@ public class incluirObras extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void btIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIncluirActionPerformed
@@ -186,7 +184,7 @@ public class incluirObras extends javax.swing.JInternalFrame {
         idEngenheiro.setText("");
     }//GEN-LAST:event_btLimparActionPerformed
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btIncluir;
     private javax.swing.JButton btLimpar;
     private javax.swing.JButton btVoltar;
@@ -201,5 +199,5 @@ public class incluirObras extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField nomeObra;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

@@ -30,15 +30,12 @@ public class Daousuario {
 
         try {
             String SQL = "SELECT * FROM usuarios";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
-
             ArrayList<usuarios> lista = new ArrayList<>();
-
+            
             while (rs.next()) {
                 usuarios prod = new usuarios();
-
                 prod.setIdUsuario(rs.getInt("idUsuario"));
                 prod.setNome(rs.getString("Nome"));
                 prod.setEmail(rs.getString("Email"));
@@ -64,7 +61,6 @@ public class Daousuario {
                        + "VALUES (?, ?, ?, ?)";
 
             ps = dataSource.getConnection().prepareStatement(SQL);
-
             ps.setInt(1, prod.getIdUsuario());
             ps.setString(2, prod.getNome());
             ps.setString(3, prod.getEmail());
@@ -87,9 +83,7 @@ public class Daousuario {
             String SQL = "UPDATE usuarios "
                        + "SET Nome=?, Email=?, Senha=? "
                        + "WHERE idUsuario=?";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
-
             ps.setString(1, prod.getNome());
             ps.setString(2, prod.getEmail());
             ps.setString(3, prod.getSenha());
@@ -110,12 +104,10 @@ public class Daousuario {
 
         try {
             String SQL = "DELETE FROM usuarios WHERE idUsuario=?";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
             ps.setInt(1, codigo);
-
             ps.executeUpdate();
-
+            
             JOptionPane.showMessageDialog(null, "Excluído com sucesso!");
 
             ps.close();
@@ -129,7 +121,6 @@ public class Daousuario {
 
         try {
             String SQL = "SELECT * FROM usuarios WHERE Nome LIKE ?";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
             ps.setString(1, "%" + descricao + "%");
             ResultSet rs = ps.executeQuery();
@@ -138,7 +129,6 @@ public class Daousuario {
 
             while (rs.next()) {
                 usuarios prod = new usuarios();
-
                 prod.setIdUsuario(rs.getInt("idUsuario"));
                 prod.setNome(rs.getString("Nome"));
                 prod.setEmail(rs.getString("Email"));

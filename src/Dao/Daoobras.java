@@ -17,24 +17,20 @@ public class Daoobras {
 
         try {
             String SQL = "SELECT * FROM obras";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
-
             ArrayList<obras> lista = new ArrayList<>();
 
             while (rs.next()) {
                 obras prod = new obras();
-
                 prod.setIdObra(rs.getInt("idObra"));
                 prod.setDescricao(rs.getString("descricao"));
                 prod.setDtInicio(rs.getDate("dtInicio"));
                 prod.setDtFim(rs.getDate("dtFim"));
-                prod.setIdEngenehrio(rs.getInt("idEngenehrio"));
+                prod.setIdEngenehrio(rs.getInt("idEngenheiro"));
 
                 lista.add(prod);
             }
-
             ps.close();
             return lista;
         } catch (SQLException ex) {
@@ -48,11 +44,10 @@ public class Daoobras {
 
         try {
             String SQL = "INSERT INTO obras "
-                       + "(idObra, descricao, dtInicio, dtFim, idEngenehrio) "
+                       + "(idObra, descricao, dtInicio, dtFim, idEngenheiro) "
                        + "VALUES (?, ?, ?, ?, ?)";
 
             ps = dataSource.getConnection().prepareStatement(SQL);
-
             ps.setInt(1, prod.getIdObra());
             ps.setString(2, prod.getDescricao());
             ps.setDate(3, prod.getDtInicio());
@@ -60,9 +55,7 @@ public class Daoobras {
             ps.setInt(5, prod.getIdEngenehrio());
 
             ps.executeUpdate();
-
             JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
-
             ps.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao salvar: " + ex.getMessage());
@@ -74,11 +67,9 @@ public class Daoobras {
 
         try {
             String SQL = "UPDATE obras "
-                       + "SET descricao=?, dtInicio=?, dtFim=?, idEngenehrio=? "
+                       + "SET descricao=?, dtInicio=?, dtFim=?, idEngenheiro=? "
                        + "WHERE idObra=?";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
-
             ps.setString(1, prod.getDescricao());
             ps.setDate(2, prod.getDtInicio());
             ps.setDate(3, prod.getDtFim());
@@ -86,9 +77,8 @@ public class Daoobras {
             ps.setInt(5, prod.getIdObra());
 
             ps.executeUpdate();
-
             JOptionPane.showMessageDialog(null, "Alterado com sucesso!");
-
+            
             ps.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao alterar: " + ex.getMessage());
@@ -100,14 +90,11 @@ public class Daoobras {
 
         try {
             String SQL = "DELETE FROM obras WHERE idObra=?";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
             ps.setInt(1, codigo);
-
             ps.executeUpdate();
-
             JOptionPane.showMessageDialog(null, "Excluído com sucesso!");
-
+            
             ps.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao excluir: " + ex.getMessage());
@@ -119,24 +106,19 @@ public class Daoobras {
 
         try {
             String SQL = "SELECT * FROM obras WHERE descricao LIKE ?";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
-
             ps.setString(1, "%" + descricao + "%");
-
             ResultSet rs = ps.executeQuery();
-
             ArrayList<obras> lista = new ArrayList<>();
 
             while (rs.next()) {
                 obras prod = new obras();
-
+                
                 prod.setIdObra(rs.getInt("idObra"));
                 prod.setDescricao(rs.getString("descricao"));
                 prod.setDtInicio(rs.getDate("dtInicio"));
                 prod.setDtFim(rs.getDate("dtFim"));
-                prod.setIdEngenehrio(rs.getInt("idEngenehrio"));
-
+                prod.setIdEngenehrio(rs.getInt("idEngenheiro"));
                 lista.add(prod);
             }
 

@@ -4,13 +4,10 @@ public class funcoes extends javax.swing.JInternalFrame {
     public funcoes() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -30,10 +27,10 @@ public class funcoes extends javax.swing.JInternalFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Obras");
 
-        btIncluirObras.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btIncluirObras.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btIncluirObras.setText("Inlcuir Obras");
         btIncluirObras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,13 +38,13 @@ public class funcoes extends javax.swing.JInternalFrame {
             }
         });
 
-        btConsultarObras.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btConsultarObras.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btConsultarObras.setText("Consultar Obras");
 
-        btAlterarObras.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btAlterarObras.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btAlterarObras.setText("Alterar Obras");
 
-        btExcluirFases.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btExcluirFases.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btExcluirFases.setText("Excluir Obras");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -88,12 +85,16 @@ public class funcoes extends javax.swing.JInternalFrame {
 
         jLabel2.setText("Sistema de Controle de Obras — Balança-Mas-Não-Cai");
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24));  
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel3.setText("Funções");
 
-        btIncluirFuncoes.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btIncluirFuncoes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btIncluirFuncoes.setText("Inlcuir Funções");
         btIncluirFuncoes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +102,7 @@ public class funcoes extends javax.swing.JInternalFrame {
             }
         });
 
-        btConsultarFuncoes.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btConsultarFuncoes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btConsultarFuncoes.setText("Consultar Funções");
         btConsultarFuncoes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,7 +110,7 @@ public class funcoes extends javax.swing.JInternalFrame {
             }
         });
 
-        btAlterarFuncoes.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btAlterarFuncoes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btAlterarFuncoes.setText("Alterar Funções");
         btAlterarFuncoes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,7 +118,7 @@ public class funcoes extends javax.swing.JInternalFrame {
             }
         });
 
-        btExcluirFuncoes.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btExcluirFuncoes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btExcluirFuncoes.setText("Excluir Funções");
         btExcluirFuncoes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,7 +191,7 @@ public class funcoes extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btIncluirObrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIncluirObrasActionPerformed
     }//GEN-LAST:event_btIncluirObrasActionPerformed
@@ -223,7 +224,7 @@ public class funcoes extends javax.swing.JInternalFrame {
         janela.setVisible(true);
     }//GEN-LAST:event_btExcluirFuncoesActionPerformed
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAlterarFuncoes;
     private javax.swing.JButton btAlterarObras;
     private javax.swing.JButton btConsultarFuncoes;
@@ -238,5 +239,5 @@ public class funcoes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

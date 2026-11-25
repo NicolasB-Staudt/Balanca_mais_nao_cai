@@ -10,16 +10,14 @@ public class alterarFase extends javax.swing.JInternalFrame {
     public alterarFase() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
+        
 
         limpacampos();
         letable();
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollBar1 = new javax.swing.JScrollBar();
@@ -35,7 +33,11 @@ public class alterarFase extends javax.swing.JInternalFrame {
         nomeFase = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("ALTERAR FASES ");
 
         btVoltar.setText("Voltar ao Menu");
@@ -63,15 +65,20 @@ public class alterarFase extends javax.swing.JInternalFrame {
                 "Código", "Nome"
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Código");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nome");
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton2.setText("Alterar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,13 +145,10 @@ public class alterarFase extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+       dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -176,6 +180,16 @@ public class alterarFase extends javax.swing.JInternalFrame {
         });
     }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+
+    if (jTable2.getSelectedRow() > -1) {
+    codFase.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString());
+    nomeFase.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 1).toString());
+ 
+}
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable2MouseClicked
 
     public void limpacampos() {
     codFase.setText("");
@@ -216,7 +230,7 @@ public void letable() {
     }
 }
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btVoltar;
     private javax.swing.JTextField codFase;
     private javax.swing.JButton jButton1;
@@ -229,5 +243,5 @@ public void letable() {
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField nomeFase;
     private javax.swing.JTextField pesquisar;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

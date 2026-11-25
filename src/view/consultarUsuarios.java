@@ -9,21 +9,22 @@ public class consultarUsuarios extends javax.swing.JInternalFrame {
     public consultarUsuarios() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
 
         letable();
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
+
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -38,7 +39,7 @@ public class consultarUsuarios extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable2);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("CONSULTA USUÁRIOS");
 
         btVoltar.setText("Voltar ao Menu");
@@ -73,13 +74,10 @@ public class consultarUsuarios extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     public void consulta() {
@@ -107,10 +105,10 @@ public class consultarUsuarios extends javax.swing.JInternalFrame {
         }
     }
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable2;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

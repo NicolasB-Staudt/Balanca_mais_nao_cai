@@ -9,16 +9,13 @@ public class alterarUsuarios extends javax.swing.JInternalFrame {
     public alterarUsuarios() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
 
         limpacampos();
         letable();
     }
 
    @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -37,10 +34,14 @@ public class alterarUsuarios extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         senhaFase = new javax.swing.JTextField();
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("ALTERAR USUÁRIOS ");
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton2.setText("Alterar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,18 +74,29 @@ public class alterarUsuarios extends javax.swing.JInternalFrame {
                 "Código", "Nome", "Email", "Senha"
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Código");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nome");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Email");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        emailFase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailFaseActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Senha");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -165,13 +177,10 @@ public class alterarUsuarios extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -206,6 +215,21 @@ public class alterarUsuarios extends javax.swing.JInternalFrame {
         });
     }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+
+    if (jTable2.getSelectedRow() > -1) {
+    codUser.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString());
+    nomeUser.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 1).toString());
+    emailFase.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 1).toString());
+    senhaFase.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 1).toString());
+}
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable2MouseClicked
+
+    private void emailFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailFaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailFaseActionPerformed
 
     public void limpacampos() {
         codUser.setText("");
@@ -248,7 +272,7 @@ public class alterarUsuarios extends javax.swing.JInternalFrame {
         }
     }
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btVoltar;
     private javax.swing.JTextField codUser;
     private javax.swing.JTextField emailFase;
@@ -264,5 +288,5 @@ public class alterarUsuarios extends javax.swing.JInternalFrame {
     private javax.swing.JTextField nomeUser;
     private javax.swing.JTextField pesquisar;
     private javax.swing.JTextField senhaFase;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

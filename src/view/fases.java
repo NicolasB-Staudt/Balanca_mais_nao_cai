@@ -3,13 +3,10 @@ public class fases extends javax.swing.JInternalFrame {
     public fases() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -20,12 +17,16 @@ public class fases extends javax.swing.JInternalFrame {
         btExcluir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Fases");
 
-        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btIncluir.setText("Inlcuir Fases");
         btIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -33,7 +34,7 @@ public class fases extends javax.swing.JInternalFrame {
             }
         });
 
-        btConsultar.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btConsultar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btConsultar.setText("Consultar Fases");
         btConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,7 +42,7 @@ public class fases extends javax.swing.JInternalFrame {
             }
         });
 
-        btAlterar.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btAlterar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btAlterar.setText("Alterar Fases");
         btAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,7 +50,7 @@ public class fases extends javax.swing.JInternalFrame {
             }
         });
 
-        btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btExcluir.setText("Excluir Fases");
         btExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,7 +120,7 @@ public class fases extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIncluirActionPerformed
        incluirFase janela = new incluirFase();
@@ -149,7 +150,7 @@ public class fases extends javax.swing.JInternalFrame {
         janela.setVisible(true);
     }//GEN-LAST:event_btExcluirActionPerformed
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAlterar;
     private javax.swing.JButton btConsultar;
     private javax.swing.JButton btExcluir;
@@ -157,5 +158,5 @@ public class fases extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

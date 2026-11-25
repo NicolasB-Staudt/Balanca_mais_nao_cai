@@ -3,14 +3,10 @@ package view;
 public class obras extends javax.swing.JInternalFrame {
     public obras() {
         initComponents();
-
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
@@ -21,14 +17,18 @@ public class obras extends javax.swing.JInternalFrame {
         btAlterarObras = new javax.swing.JButton();
         btExcluirFases = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
         jLabel2.setText("Sistema de Controle de Obras — Balança-Mas-Não-Cai");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Obras");
 
-        btIncluirObras.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btIncluirObras.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btIncluirObras.setText("Inlcuir Obras");
         btIncluirObras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -36,7 +36,7 @@ public class obras extends javax.swing.JInternalFrame {
             }
         });
 
-        btConsultarObras.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btConsultarObras.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btConsultarObras.setText("Consultar Obras");
         btConsultarObras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,7 +44,7 @@ public class obras extends javax.swing.JInternalFrame {
             }
         });
 
-        btAlterarObras.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btAlterarObras.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btAlterarObras.setText("Alterar Obras");
         btAlterarObras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,7 +52,7 @@ public class obras extends javax.swing.JInternalFrame {
             }
         });
 
-        btExcluirFases.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btExcluirFases.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btExcluirFases.setText("Excluir Obras");
         btExcluirFases.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +121,7 @@ public class obras extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btIncluirObrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIncluirObrasActionPerformed
     incluirObras janela = new incluirObras();
@@ -151,7 +151,7 @@ public class obras extends javax.swing.JInternalFrame {
     janela.setVisible(true);
     }//GEN-LAST:event_btExcluirFasesActionPerformed
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAlterarObras;
     private javax.swing.JButton btConsultarObras;
     private javax.swing.JButton btExcluirFases;
@@ -159,5 +159,5 @@ public class obras extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

@@ -10,16 +10,14 @@ public class alexincOrcamento extends javax.swing.JInternalFrame {
        public alexincOrcamento() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
+        
 
         limpacampos();
         letable();
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
@@ -38,13 +36,17 @@ public class alexincOrcamento extends javax.swing.JInternalFrame {
         btExcluir = new javax.swing.JButton();
         btIncluir = new javax.swing.JButton();
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("id Orçamento");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Data aprovação");
 
-        btAlterar.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btAlterar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btAlterar.setText("Alterar");
         btAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,7 +54,7 @@ public class alexincOrcamento extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Altere, Excluir e Incluir Orçamento");
 
         btVoltar.setText("Voltar ao Menu");
@@ -80,12 +82,17 @@ public class alexincOrcamento extends javax.swing.JInternalFrame {
                 "idOrcamento ", "dtAprovacao ", "idEngenheiroResponsavel "
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("id Engenheiro Responsavel ");
 
-        btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +100,7 @@ public class alexincOrcamento extends javax.swing.JInternalFrame {
             }
         });
 
-        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btIncluir.setText("Incluir");
         btIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,13 +188,10 @@ public class alexincOrcamento extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+         dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -256,6 +260,16 @@ public class alexincOrcamento extends javax.swing.JInternalFrame {
     letable();
     }//GEN-LAST:event_btAlterarActionPerformed
 
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+
+    if (jTable2.getSelectedRow() > -1) {
+    idOr.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString());
+    dtOrc.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 1).toString());
+    idEngRes.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 2).toString());
+}
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable2MouseClicked
+
     public void limpacampos() {
     idOr.setText("");
     dtOrc.setText("");
@@ -296,7 +310,7 @@ public void letable() {
     }
 }
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAlterar;
     private javax.swing.JButton btExcluir;
     private javax.swing.JButton btIncluir;
@@ -312,5 +326,5 @@ public void letable() {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField pesquisar;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

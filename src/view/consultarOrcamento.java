@@ -9,15 +9,12 @@ public class consultarOrcamento extends javax.swing.JInternalFrame {
     public consultarOrcamento() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
 
         letable();
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -25,7 +22,11 @@ public class consultarOrcamento extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("CONSULTAR ORÇAMENTO");
 
         jButton1.setText("Voltar ao Menu");
@@ -73,13 +74,10 @@ public class consultarOrcamento extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
       public void consulta() {
@@ -107,10 +105,10 @@ public void letable() {
     }
 }
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

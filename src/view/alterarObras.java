@@ -14,16 +14,13 @@ public class alterarObras extends javax.swing.JInternalFrame {
         initComponents();
         
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
 
         limpacampos();
         letable();
     }
 
     @SuppressWarnings("unchecked")
-//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         senhaFase = new javax.swing.JTextField();
@@ -44,6 +41,10 @@ public class alterarObras extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         idObras = new javax.swing.JTextField();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -55,21 +56,26 @@ public class alterarObras extends javax.swing.JInternalFrame {
                 "Id da Obra", "Nome da Obra", "Data de Início", "Data do Fim", "Id do Engenheiro"
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Código");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nome");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("ALTERAR OBRAS ");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Data de Início");
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton2.setText("Alterar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,7 +90,7 @@ public class alterarObras extends javax.swing.JInternalFrame {
             }
         });
 
-        dtFim.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        dtFim.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         dtFim.setText("Data do Fim");
 
         jButton1.setText("Pesquisar");
@@ -94,7 +100,7 @@ public class alterarObras extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Id do Engenheiro");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -177,13 +183,11 @@ public class alterarObras extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
 
-        menuFinal janela = new menuFinal();
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+        dispose();
          
     }//GEN-LAST:event_btVoltarActionPerformed
 
@@ -225,6 +229,19 @@ public class alterarObras extends javax.swing.JInternalFrame {
         limpacampos();
         letable();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+
+           if (jTable2.getSelectedRow() > -1) {
+    idObra.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString());
+    nomeObra.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 1).toString());
+        dtInicio.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 2).toString());
+    senhaFase.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 3).toString());
+    idObras.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 4).toString());
+
+}
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable2MouseClicked
 
 
     
@@ -272,7 +289,7 @@ public class alterarObras extends javax.swing.JInternalFrame {
         }
     }
 
-//GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btVoltar;
     private javax.swing.JLabel dtFim;
     private javax.swing.JTextField dtInicio;
@@ -290,5 +307,5 @@ public class alterarObras extends javax.swing.JInternalFrame {
     private javax.swing.JTextField nomeObra;
     private javax.swing.JTextField pesquisar;
     private javax.swing.JTextField senhaFase;
-//GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

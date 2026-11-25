@@ -10,13 +10,10 @@ public class incluirFase extends javax.swing.JInternalFrame {
     public incluirFase() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
@@ -28,13 +25,17 @@ public class incluirFase extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Código da Fase");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nome da Fase");
 
-        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btIncluir.setText("Incluir");
         btIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -42,7 +43,7 @@ public class incluirFase extends javax.swing.JInternalFrame {
             }
         });
 
-        btLimpar.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btLimpar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,7 +51,7 @@ public class incluirFase extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("INCLUSÃO DE FASES ");
 
         btVoltar.setText("Voltar ao Menu");
@@ -111,13 +112,10 @@ public class incluirFase extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+       dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void btIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIncluirActionPerformed
@@ -137,7 +135,7 @@ public class incluirFase extends javax.swing.JInternalFrame {
         nomeFase.setText("");
     }//GEN-LAST:event_btLimparActionPerformed
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btIncluir;
     private javax.swing.JButton btLimpar;
     private javax.swing.JButton btVoltar;
@@ -146,5 +144,5 @@ public class incluirFase extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField nomeFase;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

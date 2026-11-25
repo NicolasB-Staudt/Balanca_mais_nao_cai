@@ -6,13 +6,11 @@ public class incluirFuncoes extends javax.swing.JInternalFrame {
     public incluirFuncoes() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
+
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
@@ -25,9 +23,13 @@ public class incluirFuncoes extends javax.swing.JInternalFrame {
         btIncluir = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Inclusão de Funções");
 
         btVoltar.setText("Voltar ao Menu");
@@ -37,13 +39,13 @@ public class incluirFuncoes extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("id da Função");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nome da Fução ");
 
-        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btIncluir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btIncluir.setText("Incluir");
         btIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,7 +53,7 @@ public class incluirFuncoes extends javax.swing.JInternalFrame {
             }
         });
 
-        btLimpar.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btLimpar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btLimpar.setText("Limpar");
         btLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,13 +128,10 @@ public class incluirFuncoes extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void btIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIncluirActionPerformed
@@ -152,7 +151,7 @@ public class incluirFuncoes extends javax.swing.JInternalFrame {
         nomeFuncao.setText("");
     }//GEN-LAST:event_btLimparActionPerformed
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btIncluir;
     private javax.swing.JButton btLimpar;
     private javax.swing.JButton btVoltar;
@@ -162,5 +161,5 @@ public class incluirFuncoes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField nomeFuncao;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

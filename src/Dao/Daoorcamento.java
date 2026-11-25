@@ -17,15 +17,12 @@ public class Daoorcamento {
 
         try {
             String SQL = "SELECT * FROM orcamentos";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
-
             ArrayList<orcamento> lista = new ArrayList<>();
 
             while (rs.next()) {
                 orcamento prod = new orcamento();
-
                 prod.setIdOrcamento(rs.getInt("idOrcamento"));
                 prod.setDtAprovacao(rs.getDate("dtAprovacao"));
                 prod.setIdEngenheiroResponsavel(rs.getInt("idEngenheiroResponsavel"));
@@ -50,15 +47,12 @@ public class Daoorcamento {
                        + "VALUES (?, ?, ?)";
 
             ps = dataSource.getConnection().prepareStatement(SQL);
-
             ps.setInt(1, prod.getIdOrcamento());
             ps.setDate(2, prod.getDtAprovacao());
             ps.setInt(3, prod.getIdEngenheiroResponsavel());
-
             ps.executeUpdate();
-
+            
             JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
-
             ps.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao salvar: " + ex.getMessage());
@@ -78,11 +72,9 @@ public class Daoorcamento {
             ps.setDate(1, prod.getDtAprovacao());
             ps.setInt(2, prod.getIdEngenheiroResponsavel());
             ps.setInt(3, prod.getIdOrcamento());
-
             ps.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Alterado com sucesso!");
-
             ps.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao alterar: " + ex.getMessage());
@@ -94,14 +86,10 @@ public class Daoorcamento {
 
         try {
             String SQL = "DELETE FROM orcamentos WHERE idOrcamento=?";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
             ps.setInt(1, codigo);
-
             ps.executeUpdate();
-
             JOptionPane.showMessageDialog(null, "Excluído com sucesso!");
-
             ps.close();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao excluir: " + ex.getMessage());
@@ -113,13 +101,9 @@ public class Daoorcamento {
 
         try {
             String SQL = "SELECT * FROM orcamentos WHERE dtAprovacao LIKE ?";
-
             ps = dataSource.getConnection().prepareStatement(SQL);
-
             ps.setString(1, "%" + descricao + "%");
-
             ResultSet rs = ps.executeQuery();
-
             ArrayList<orcamento> lista = new ArrayList<>();
 
             while (rs.next()) {

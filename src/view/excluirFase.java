@@ -10,16 +10,12 @@ public class excluirFase extends javax.swing.JInternalFrame {
     public excluirFase() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
-
         limpacampos();
         letable();
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel3 = new javax.swing.JLabel();
@@ -34,7 +30,11 @@ public class excluirFase extends javax.swing.JInternalFrame {
         jTable2 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nome");
 
         codFase.addActionListener(new java.awt.event.ActionListener() {
@@ -43,7 +43,7 @@ public class excluirFase extends javax.swing.JInternalFrame {
             }
         });
 
-        btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,7 +51,7 @@ public class excluirFase extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("ALTERAR FASES ");
 
         btVoltar.setText("Voltar ao Menu");
@@ -79,9 +79,14 @@ public class excluirFase extends javax.swing.JInternalFrame {
                 "Código", "Nome"
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Código");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,13 +148,10 @@ public class excluirFase extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void codFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codFaseActionPerformed
@@ -187,6 +189,15 @@ public class excluirFase extends javax.swing.JInternalFrame {
         });
     }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+
+                    if (jTable2.getSelectedRow() > -1) {
+    codFase.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString());
+    nomeFase.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 1).toString());
+}
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable2MouseClicked
 
      public void limpacampos() {
     codFase.setText("");
@@ -227,7 +238,7 @@ public void letable() {
     }
 }
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btExcluir;
     private javax.swing.JButton btVoltar;
     private javax.swing.JTextField codFase;
@@ -239,5 +250,5 @@ public void letable() {
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField nomeFase;
     private javax.swing.JTextField pesquisar;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

@@ -4,13 +4,11 @@ public class usuarios extends javax.swing.JInternalFrame {
     public usuarios() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
+    
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
@@ -21,14 +19,18 @@ public class usuarios extends javax.swing.JInternalFrame {
         btAlterarUsuarios = new javax.swing.JButton();
         btExcluirUsuarios = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
         jLabel2.setText("Sistema de Controle de Obras — Balança-Mas-Não-Cai");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Usuários");
 
-        btIncluirUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btIncluirUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btIncluirUsuarios.setText("Inlcuir Usuários");
         btIncluirUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -36,7 +38,7 @@ public class usuarios extends javax.swing.JInternalFrame {
             }
         });
 
-        btConsultarUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btConsultarUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btConsultarUsuarios.setText("Consultar Usuários");
         btConsultarUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,7 +46,7 @@ public class usuarios extends javax.swing.JInternalFrame {
             }
         });
 
-        btAlterarUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btAlterarUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btAlterarUsuarios.setText("Alterar Usuários");
         btAlterarUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,7 +54,7 @@ public class usuarios extends javax.swing.JInternalFrame {
             }
         });
 
-        btExcluirUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btExcluirUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btExcluirUsuarios.setText("Excluir Usuários");
         btExcluirUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +122,7 @@ public class usuarios extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btIncluirUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIncluirUsuariosActionPerformed
         incluirUsuario janela = new incluirUsuario();
@@ -150,7 +152,7 @@ public class usuarios extends javax.swing.JInternalFrame {
         janela.setVisible(true);
     }//GEN-LAST:event_btExcluirUsuariosActionPerformed
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAlterarUsuarios;
     private javax.swing.JButton btConsultarUsuarios;
     private javax.swing.JButton btExcluirUsuarios;
@@ -158,5 +160,5 @@ public class usuarios extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

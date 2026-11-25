@@ -9,15 +9,11 @@ public class excluirFuncoes extends javax.swing.JInternalFrame {
     public excluirFuncoes() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
-
         limpacampos();
         letable();
     }
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         btVoltar = new javax.swing.JButton();
@@ -47,16 +43,16 @@ public class excluirFuncoes extends javax.swing.JInternalFrame {
 
         jButton1.setText("Pesquisar");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Código");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nome");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("ALTERAR FUNÇÕES ");
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton2.setText("Alterar");
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -72,6 +68,10 @@ public class excluirFuncoes extends javax.swing.JInternalFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
         btVoltar1.setText("Voltar ao Menu");
         btVoltar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,16 +86,16 @@ public class excluirFuncoes extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Código");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14));  
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Nome");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setText("EXCLUIR FUNÇÕES ");
 
-        btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btExcluir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btExcluir.setText("Excluir");
         btExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,6 +114,11 @@ public class excluirFuncoes extends javax.swing.JInternalFrame {
                 "Código", "Nome"
             }
         ));
+        jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable3MouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(jTable3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -175,13 +180,10 @@ public class excluirFuncoes extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltar1ActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btVoltar1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -216,6 +218,15 @@ public class excluirFuncoes extends javax.swing.JInternalFrame {
         letable();
     }
     }//GEN-LAST:event_btExcluirActionPerformed
+
+    private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
+
+    if (jTable2.getSelectedRow() > -1) {
+    codFun1.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString());
+    nomeFun1.setText(jTable2.getValueAt(jTable2.getSelectedRow(), 1).toString());
+}
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable3MouseClicked
 
     public void limpacampos() {
         codFun1.setText("");
@@ -253,7 +264,7 @@ public class excluirFuncoes extends javax.swing.JInternalFrame {
         }
     }
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btExcluir;
     private javax.swing.JButton btVoltar;
     private javax.swing.JButton btVoltar1;
@@ -276,5 +287,5 @@ public class excluirFuncoes extends javax.swing.JInternalFrame {
     private javax.swing.JTextField nomeFun1;
     private javax.swing.JTextField pesquisar;
     private javax.swing.JTextField pesquisar1;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

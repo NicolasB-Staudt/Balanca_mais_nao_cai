@@ -4,12 +4,9 @@ public class engenheiros extends javax.swing.JInternalFrame {
     public engenheiros() {
         initComponents();
 
-        setClosable(false);
-        setResizable(false);
-        setMaximizable(false);
     }
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
@@ -20,14 +17,18 @@ public class engenheiros extends javax.swing.JInternalFrame {
         btAlterarEngenheiros = new javax.swing.JButton();
         btExcluirEngenheiros = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
         jLabel2.setText("Sistema de Controle de Obras — Balança-Mas-Não-Cai");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Engenheiros");
 
-        btIncluirEngenheiros.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btIncluirEngenheiros.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btIncluirEngenheiros.setText("Inlcuir Engenheiros");
         btIncluirEngenheiros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -35,7 +36,7 @@ public class engenheiros extends javax.swing.JInternalFrame {
             }
         });
 
-        btConsultarEngenheiros.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btConsultarEngenheiros.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btConsultarEngenheiros.setText("Consultar Engenheiros");
         btConsultarEngenheiros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,7 +44,7 @@ public class engenheiros extends javax.swing.JInternalFrame {
             }
         });
 
-        btAlterarEngenheiros.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btAlterarEngenheiros.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btAlterarEngenheiros.setText("Alterar Engenheiros");
         btAlterarEngenheiros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,7 +52,7 @@ public class engenheiros extends javax.swing.JInternalFrame {
             }
         });
 
-        btExcluirEngenheiros.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        btExcluirEngenheiros.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btExcluirEngenheiros.setText("Excluir Engenheiros");
         btExcluirEngenheiros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +121,7 @@ public class engenheiros extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btIncluirEngenheirosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIncluirEngenheirosActionPerformed
         incluirEngenheiro janela = new incluirEngenheiro();
@@ -150,7 +151,7 @@ public class engenheiros extends javax.swing.JInternalFrame {
         janela.setVisible(true);
     }//GEN-LAST:event_btConsultarEngenheirosActionPerformed
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAlterarEngenheiros;
     private javax.swing.JButton btConsultarEngenheiros;
     private javax.swing.JButton btExcluirEngenheiros;
@@ -158,5 +159,5 @@ public class engenheiros extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }

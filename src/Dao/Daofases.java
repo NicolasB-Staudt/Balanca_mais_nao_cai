@@ -38,7 +38,7 @@ public class Daofases {
     public void incluir(fase prod) {
         PreparedStatement ps = null;
         try {
-            String SQL = "INSERT INTO fase "
+            String SQL = "INSERT INTO fases "
                        + "(idFase, dsFase) "
                        + "VALUES (?, ?)";
 
@@ -60,7 +60,7 @@ public class Daofases {
         PreparedStatement ps = null;
 
         try {
-            String SQL = "UPDATE fase "
+            String SQL = "UPDATE fases "
                + "SET dsFase=?"
                + "WHERE idFase=?";
 
@@ -104,7 +104,7 @@ public class Daofases {
     public ArrayList<fase> seleciona(String descricao) {
         PreparedStatement ps = null;
         try {
-            String SQL = "SELECT * FROM fase WHERE dsFase LIKE ?";
+            String SQL = "SELECT * FROM fases WHERE dsFase LIKE ?";
             ps = dataSource.getConnection().prepareStatement(SQL);
             ps.setString(1, "%" + descricao + "%");
 

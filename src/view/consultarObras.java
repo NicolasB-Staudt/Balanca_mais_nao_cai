@@ -9,22 +9,23 @@ public class consultarObras extends javax.swing.JInternalFrame {
     public consultarObras() {
         initComponents();
 
-        setClosable(true);
-        setResizable(true);
-        setMaximizable(true);
 
         letable();
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
     }
 
     @SuppressWarnings("unchecked")
-    //GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         btVoltar = new javax.swing.JButton();
+
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -39,7 +40,7 @@ public class consultarObras extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable4);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));  
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("CONSULTA OBRAS");
 
         btVoltar.setText("Voltar ao Menu");
@@ -74,13 +75,10 @@ public class consultarObras extends javax.swing.JInternalFrame {
         );
 
         pack();
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        menuFinal janela = new menuFinal();
-
-        getDesktopPane().add(janela);
-        janela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
     public void consulta() {
@@ -110,10 +108,10 @@ public class consultarObras extends javax.swing.JInternalFrame {
         }
     }
 
-    //GEN-BEGIN:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable4;
-    //GEN-END:variables
+    // End of variables declaration//GEN-END:variables
 }
